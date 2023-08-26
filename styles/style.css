@@ -1,0 +1,83 @@
+@font-face {
+   font-family: "Poppins-Regular";
+   src: local(Poppins-Regular), url(../font/Poppins-Regular/Poppins-Regular.eot);
+   src: url(../font/Poppins-Regular/?#iefix) format("embedded-opentype"),
+      url(../font/Poppins-Regular/Poppins-Regular.otf) format("otf"),
+      url(../font/Poppins-Regular/Poppins-Regular.ttf) format("truetype"),
+      url(../font/Poppins-Regular/Poppins-Regular.woff) format("woff"),
+      url(../font/Poppins-Regular/Poppins-Regular.woff2) format("woff2"),
+      url(../font/Poppins-Regular/Poppins-Regular.svg#Poppins-Regular)
+         format("svg");
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   height: 100vh;
+   display: grid;
+   place-items: center;
+   font-family: Poppins;
+   background-color: #e0e0e0;
+}
+a {
+   text-decoration: none;
+}
+.container {
+   position: relative;
+}
+.btn {
+   background-color: #303f9f;
+   color: #fff;
+   display: flex;
+   transition-delay: 0.2s;
+   align-items: center;
+   padding: 10px 20px;
+   border-radius: 10px;
+   gap: 7px;
+}
+.container:hover nav {
+   transform: scaleY(100%);
+   opacity: 1;
+   visibility: visible;
+}
+.container:hover .btn {
+   background-color: #01579b;
+}
+.container:hover svg {
+   transform: rotate(180deg);
+}
+
+.arrow {
+   transition: all 0.5s;
+   transition-delay: 0.1s;
+}
+nav {
+   position: absolute;
+   width: 100%;
+   top: 55px;
+   padding: 10px 0;
+   transform: scaleY(0);
+   visibility: hidden;
+   transform-origin: center 0;
+   opacity: 0;
+   transition: all 0.5s;
+   transition-delay: 0.2s;
+   border-radius: 10px;
+   text-align: center;
+   background-color: #fff;
+   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+ul {
+   list-style-type: none;
+   display: flex;
+   flex-direction: column;
+}
+li a {
+   display: inline-block;
+   width: 100%;
+   padding: 2px 0;
+   color: #000;
+}
